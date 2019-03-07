@@ -1,0 +1,8 @@
+function [Zout] = GoalParabola_Offense(X,Y,Zin,depress,flattenX,flattenY) % originally depress -15, flatten 2
+    Zgoal = depress + (X./flattenX).^2 + (Y./flatten).^2;
+    Zflat = X.*0;
+    C = Zin < Zgoal;
+    Zout1 = Zin.*~C+Z.*C;
+    C = Zout1 < Zflat;
+    Zout = Zin.*~C+Z.*C;
+end
